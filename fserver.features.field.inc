@@ -732,9 +732,10 @@ function fserver_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'module' => 'file',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
+          'type' => 'file_default',
+          'weight' => 22,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -751,6 +752,24 @@ function fserver_field_default_fields() {
         'description_field' => 0,
         'file_directory' => 'releases',
         'file_extensions' => 'tgz tar gz zip',
+        'filefield_paths' => array(
+          'active_updating' => 0,
+          'file_name' => array(
+            'options' => array(
+              'pathauto' => 1,
+              'transliterate' => 1,
+            ),
+            'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          ),
+          'file_path' => array(
+            'options' => array(
+              'pathauto' => 1,
+              'transliterate' => 1,
+            ),
+            'value' => 'content/projects/[node:field_fserver_project]/releases',
+          ),
+          'retroactive_update' => 1,
+        ),
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
