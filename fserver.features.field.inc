@@ -735,7 +735,7 @@ function fserver_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => 22,
+          'weight' => 42,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -756,7 +756,7 @@ function fserver_field_default_fields() {
           'active_updating' => 0,
           'file_name' => array(
             'options' => array(
-              'pathauto' => 1,
+              'pathauto' => 0,
               'transliterate' => 1,
             ),
             'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
